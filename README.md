@@ -6,11 +6,12 @@ flutter的网络请求封装
 一般网络异常在util/defend_error.dart文件中统一捕获处理
 网络返回code异常，通过判断当前请求是否自身处理进行过滤，通过传递NetworkErrorCallback实现
 ##使用方式：参考main.dart中的_incrementCounter方法
-    ApiGetRequest.getInstance().getAppImage().then((value) {
+   
+   
+   ApiGetRequest.getInstance().getAppImage().then((value) {
       print('-get结果--');
       print(value.name);
     });
-
     ApiPostRequest.getInstance().getAppImage(
         errorCallback: (int code, String message) {
       //自身需要处理异常显示在界面上
